@@ -1,4 +1,4 @@
-// File:       main.rs (client)
+// File:       console.rs
 // Project:    oxide
 // Repository: https://github.com/nessbe/oxide
 //
@@ -17,8 +17,23 @@
 //
 // For more details, see the LICENSE file at the root of the project.
 
-use oxide::io::console::Console;
+use std::io::{self, Write};
 
-pub fn main() {
-	Console::print_line("Hello world");
+pub struct Console;
+
+impl Console {
+	pub fn print(message: &str) {
+		print!("{}", message);
+		io::stdout().flush().unwrap();
+	}
+
+	pub fn print_line(message: &str) {
+		println!("{}", message);
+	}
+
+	pub fn read_line() -> String {
+		let mut input = String::new();
+		io::stdin().read_line(&mut input).unwrap();
+		input.trim().to_string()
+	}
 }

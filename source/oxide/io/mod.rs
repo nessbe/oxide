@@ -1,4 +1,4 @@
-// File:       main.rs (client)
+// File:       mod.rs (io)
 // Project:    oxide
 // Repository: https://github.com/nessbe/oxide
 //
@@ -17,8 +17,4 @@
 //
 // For more details, see the LICENSE file at the root of the project.
 
-use oxide::io::console::Console;
-
-pub fn main() {
-	Console::print_line("Hello world");
-}
+pub mod console;
