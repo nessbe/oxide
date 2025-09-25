@@ -22,3 +22,9 @@ target/
 
 # Cargo lock files
 *.lock
+
+# Visual Studio Code cache files
+.vscode/*
+
+# Visual Studio tasks file
+!.vscode/tasks.json
