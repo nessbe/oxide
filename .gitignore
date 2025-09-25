@@ -28,3 +28,6 @@ target/
 
 # Visual Studio tasks file
 !.vscode/tasks.json
+
+# Visual Studio launch file
+!.vscode/launch.json
