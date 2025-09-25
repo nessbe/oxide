@@ -22,4 +22,12 @@ name = "oxide"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "oxide"
+path = "source/oxide/main.rs"
+
+[[bin]]
+name = "client"
+path = "source/client/main.rs"
+
 [dependencies]
